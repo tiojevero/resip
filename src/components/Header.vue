@@ -5,7 +5,7 @@ const count = ref(0);
 </script>
 
 <template>
-    <div class="bg-gray-900 shadow-lg w-full p-4">
+    <div class="bg-black shadow-lg w-full p-4">
         <div class="container mx-auto flex justify-between">
             <span class="text-white font-bold text-lg bg-whiteb"
                 ><span class="text-orange-500">Re</span>Sip 👍</span
