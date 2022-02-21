@@ -3,7 +3,7 @@ import { onMounted, ref } from "vue";
 import { useRouter } from "vue-router";
 import useFetch from "../hooks/useFetch";
 
-const { data, fetchData } = useFetch("categories.php");
+const { data, fetchData } = useFetch();
 const router = useRouter();
 
 const search = ref<string>("");
@@ -13,7 +13,7 @@ function searchRecipe() {
 }
 
 onMounted(() => {
-    fetchData();
+    fetchData("categories.php");
 });
 </script>
 

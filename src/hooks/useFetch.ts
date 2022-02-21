@@ -1,8 +1,8 @@
 import { ref } from "vue";
 
-export default function (url: string) {
+export default function () {
     const data: any = ref(null);
-    const fetchData = async () => {
+    const fetchData = async (url: string) => {
         try {
             const response = await fetch(
                 `https://www.themealdb.com/api/json/v1/1/${url}`

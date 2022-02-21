@@ -5,10 +5,10 @@ import useFetch from "../hooks/useFetch";
 
 const route = useRoute();
 const activeRoute = route.params.name;
-const { data, fetchData } = useFetch(`filter.php?c=${activeRoute}`);
+const { data, fetchData } = useFetch();
 
 onMounted(() => {
-    fetchData();
+    fetchData(`filter.php?c=${activeRoute}`);
 });
 </script>
 

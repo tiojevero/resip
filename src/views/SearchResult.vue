@@ -1,24 +1,23 @@
 <script setup lang="ts">
-import { nextTick, watch, ref, onBeforeUpdate } from "vue";
-import { useRoute, onAfterRouteUpdate } from "vue-router";
-import { onMounted } from "vue";
+import { onMounted, watch, ref } from "vue";
+import { useRoute } from "vue-router";
 import useFetch from "../hooks/useFetch";
 
 const route = useRoute();
 const activeRoute = ref(route.params.name);
 
-const { data, fetchData } = useFetch(`search.php?s=${activeRoute.value}`);
+const { data, fetchData } = useFetch();
 
 watch(
     () => route.params.name,
     (newValue) => {
         activeRoute.value = newValue;
-        fetchData();
+        fetchData(`search.php?s=${activeRoute.value}`);
     }
 );
 
 onMounted(() => {
-    fetchData();
+    fetchData(`search.php?s=${activeRoute.value}`);
 });
 </script>
 
