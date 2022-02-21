@@ -26,28 +26,31 @@ onMounted(() => {
         <h1 class="font-semibold mt-3">
             Search result for "{{ activeRoute }}"
         </h1>
-        <div
-            class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-5"
-            v-if="data"
-        >
+        <div v-if="data">
             <div
-                class="p-3 rounded-2xl shadow-lg"
-                v-for="meal in data.meals"
-                :key="meal.idMeal"
+                class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-5"
+                v-if="data.meals"
             >
                 <div
-                    class="aspect-square bg-gray-100 rounded-lg overflow-hidden"
+                    class="p-3 rounded-2xl shadow-lg"
+                    v-for="meal in data.meals"
+                    :key="meal.idMeal"
                 >
-                    <img
-                        :src="meal.strMealThumb"
-                        :alt="meal.strMealThumb"
-                        lazy
-                    />
+                    <div
+                        class="aspect-square bg-gray-100 rounded-lg overflow-hidden"
+                    >
+                        <img
+                            :src="meal.strMealThumb"
+                            :alt="meal.strMealThumb"
+                            lazy
+                        />
+                    </div>
+                    <h5 class="font-semibold line-clamp-2 mt-2 mb-4">
+                        {{ meal.strMeal }}
+                    </h5>
                 </div>
-                <h5 class="font-semibold line-clamp-2 mt-2 mb-4">
-                    {{ meal.strMeal }}
-                </h5>
             </div>
+            <p v-else>Sorry, i can't find your favorite foods ☹</p>
         </div>
         <p v-else>Loading...</p>
     </div>
