@@ -33,9 +33,9 @@ onMounted(() => {
                             Search
                         </button>
                     </div>
-                    <h5 class="text-white text-lg font-semibold mt-3">
+                    <h2 class="text-white text-lg font-semibold mt-3">
                         Popular Categories
-                    </h5>
+                    </h2>
                     <div
                         class="w-full grid grid-cols-2 md:grid-cols-6 gap-2 mt-2"
                         v-if="data"
