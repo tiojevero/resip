@@ -1,7 +1,15 @@
 <script setup lang="ts">
-import { useRoute } from "vue-router";
+import { ref } from "vue";
+import { useRoute, useRouter } from "vue-router";
 
 const route = useRoute();
+const router = useRouter();
+
+const search = ref<string>("");
+
+function searchRecipe() {
+    router.push(`/search/${search.value}`);
+}
 </script>
 
 <template>
@@ -15,9 +23,12 @@ const route = useRoute();
                     type="text"
                     class="w-full p-2 bg-white outline-none rounded-lg"
                     placeholder="Type your favorite food"
+                    v-model="search"
+                    @keyup.enter="searchRecipe"
                 />
                 <button
                     class="bg-orange-500 text-white font-semibold px-2 py-1 absolute top-2 right-1 rounded-lg pointer hover:bg-orange-600"
+                    @click="searchRecipe"
                 >
                     Search
                 </button>

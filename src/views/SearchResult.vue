@@ -1,11 +1,21 @@
 <script setup lang="ts">
-import { useRoute } from "vue-router";
+import { nextTick, watch, ref, onBeforeUpdate } from "vue";
+import { useRoute, onAfterRouteUpdate } from "vue-router";
 import { onMounted } from "vue";
 import useFetch from "../hooks/useFetch";
 
 const route = useRoute();
-const activeRoute = route.params.name;
-const { data, fetchData } = useFetch(`filter.php?c=${activeRoute}`);
+const activeRoute = ref(route.params.name);
+
+const { data, fetchData } = useFetch(`search.php?s=${activeRoute.value}`);
+
+watch(
+    () => route.params.name,
+    (newValue) => {
+        activeRoute.value = newValue;
+        fetchData();
+    }
+);
 
 onMounted(() => {
     fetchData();
@@ -14,7 +24,9 @@ onMounted(() => {
 
 <template>
     <div class="container mx-auto p-4">
-        <h1 class="font-semibold mt-3">Category: {{ activeRoute }}</h1>
+        <h1 class="font-semibold mt-3">
+            Search result for "{{ activeRoute }}"
+        </h1>
         <div
             class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-5"
             v-if="data"

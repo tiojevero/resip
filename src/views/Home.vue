@@ -1,8 +1,16 @@
 <script setup lang="ts">
-import { onMounted } from "vue";
+import { onMounted, ref } from "vue";
+import { useRouter } from "vue-router";
 import useFetch from "../hooks/useFetch";
 
 const { data, fetchData } = useFetch("categories.php");
+const router = useRouter();
+
+const search = ref<string>("");
+
+function searchRecipe() {
+    router.push(`/search/${search.value}`);
+}
 
 onMounted(() => {
     fetchData();
@@ -26,9 +34,12 @@ onMounted(() => {
                             type="text"
                             class="w-full p-4 bg-white outline-none rounded-xl"
                             placeholder="Type your favorite food"
+                            v-model="search"
+                            @keyup.enter="searchRecipe"
                         />
                         <button
                             class="bg-orange-500 text-white font-semibold px-4 py-3 absolute top-4 right-1 rounded-lg pointer hover:bg-orange-600"
+                            @click="searchRecipe"
                         >
                             Search
                         </button>
@@ -49,6 +60,7 @@ onMounted(() => {
                             {{ category.strCategory }}
                         </router-link>
                     </div>
+                    <p class="text-white" v-else>Loading...</p>
                 </div>
             </div>
         </div>
