@@ -7,7 +7,7 @@ const route = useRoute();
 const router = useRouter();
 const { data, fetchData } = useFetch();
 
-const ingredients = ref<string[]>([]);
+const ingredients = ref<any>([]);
 
 function createIngredientsArray(recipe: any) {
     for (let i = 1; i <= 20; i++) {
