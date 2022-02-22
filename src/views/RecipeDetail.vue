@@ -7,12 +7,12 @@ const route = useRoute();
 const router = useRouter();
 const { data, fetchData } = useFetch();
 
-const ingredients = ref([]);
+const ingredients = ref<string[]>([]);
 
 function createIngredientsArray(recipe: any) {
     for (let i = 1; i <= 20; i++) {
         if (recipe[`strIngredient${i}`]) {
-            const strIngredient = {
+            const strIngredient: any = {
                 name: `${recipe[`strIngredient${i}`]}`,
                 measure: `${recipe[`strMeasure${i}`]}`,
             };
@@ -71,5 +71,6 @@ watch(
                 </p>
             </div>
         </div>
+        <div class="mt-3" v-else>Loading...</div>
     </div>
 </template>
