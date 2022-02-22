@@ -20,7 +20,7 @@ function searchRecipe() {
                 ><span class="text-orange-500">Re</span>Sip👍</router-link
             >
             <div
-                class="relative w-2/3 md:w-1/2 py-1 mx-5"
+                class="relative w-2/3 md:w-1/2 py-1 md:mx-5"
                 v-if="route.path !== '/'"
             >
                 <input

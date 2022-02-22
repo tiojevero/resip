@@ -1,7 +1,7 @@
 import { ref } from "vue";
 
 export default function () {
-    const data: any = ref(null);
+    const data = ref<any>(null);
     const fetchData = async (url: string) => {
         try {
             const response = await fetch(

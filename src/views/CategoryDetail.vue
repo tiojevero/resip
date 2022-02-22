@@ -19,10 +19,11 @@ onMounted(() => {
             class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-5"
             v-if="data"
         >
-            <div
+            <router-link
                 class="p-3 rounded-2xl shadow-lg"
                 v-for="meal in data.meals"
                 :key="meal.idMeal"
+                :to="`/recipe/${meal.idMeal}`"
             >
                 <div
                     class="aspect-square bg-gray-100 rounded-lg overflow-hidden"
@@ -36,7 +37,7 @@ onMounted(() => {
                 <h5 class="font-semibold line-clamp-2 mt-2 mb-4">
                     {{ meal.strMeal }}
                 </h5>
-            </div>
+            </router-link>
         </div>
         <p v-else>Loading...</p>
     </div>
