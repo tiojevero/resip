@@ -55,6 +55,13 @@ watch(
                 <h1 class="text-4xl mt-4 font-bold">
                     {{ data.meals[0].strMeal }}
                 </h1>
+                <h2 class="text-sm font-medium mt-3">
+                    Category :
+                    <span
+                        class="bg-gray-200 text-gray-600 rounded-full ml-2 px-3 py-1 inline-block"
+                        >{{ data.meals[0].strCategory }}</span
+                    >
+                </h2>
                 <h2 class="text-xl font-semibold mt-5 mb-2">Ingredients</h2>
                 <div class="grid grid-cols-2 lg:grid-cols-5 gap-4">
                     <div
