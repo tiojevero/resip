@@ -12,7 +12,7 @@ defineProps({
         v-if="data"
     >
         <router-link
-            class="p-3 rounded-2xl shadow-lg"
+            class="p-3 rounded-2xl shadow-md hover:shadow-lg"
             v-for="meal in data.meals"
             :key="meal.idMeal"
             :to="`/recipe/${meal.idMeal}`"

@@ -21,6 +21,11 @@ function createIngredientsArray(recipe: any) {
     }
 }
 
+function addEnter(text: string) {
+    const result = text.split("\n").join("<br>");
+    return result;
+}
+
 onMounted(() => {
     fetchData(`lookup.php?i=${route.params.id}`);
 });
@@ -66,9 +71,10 @@ watch(
                     </div>
                 </div>
                 <h2 class="text-xl font-semibold mt-5 mb-2">Instructions</h2>
-                <p>
-                    {{ data.meals[0].strInstructions }}
-                </p>
+                <p
+                    class="mb-12"
+                    v-html="addEnter(data.meals[0].strInstructions)"
+                ></p>
             </div>
         </div>
         <div class="mt-3" v-else>Loading...</div>
