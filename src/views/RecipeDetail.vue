@@ -33,7 +33,7 @@ watch(
 </script>
 
 <template>
-    <div class="container mx-auto p-4 mt-5">
+    <div class="container mx-auto p-4">
         <button
             class="font-semibold mb-4 hover:bg-gray-100 rounded-full px-3"
             @click="router.go(-1)"
