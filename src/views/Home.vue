@@ -55,7 +55,7 @@ onMounted(() => {
                             :to="`/category/${category.strCategory}`"
                             v-for="category in data.categories"
                             :key="category.idCategory"
-                            class="bg-white/[.1] hover:bg-white/[.2] backdrop-blur-lg text-white text-center font-semibold px-3 py-1 rounded"
+                            class="bg-white/[.1] hover:bg-white/[.2] md:backdrop-blur-lg text-white text-center font-semibold px-3 py-1 rounded"
                         >
                             {{ category.strCategory }}
                         </router-link>
