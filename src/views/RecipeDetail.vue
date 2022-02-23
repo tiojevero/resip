@@ -35,7 +35,7 @@ watch(
 <template>
     <div class="container mx-auto p-4 mt-5">
         <button
-            class="font-semibold mb-4 hover:bg-gray-100 rounded px-3"
+            class="font-semibold mb-4 hover:bg-gray-100 rounded-full px-3"
             @click="router.go(-1)"
         >
             &lt; Back
