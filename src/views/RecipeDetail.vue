@@ -40,7 +40,7 @@ watch(
 <template>
     <div class="container mx-auto p-4">
         <button
-            class="font-semibold mb-4 hover:bg-gray-100 rounded-full px-3"
+            class="font-semibold mb-4 hover:bg-gray-100 rounded-full px-3 py-1"
             @click="router.go(-1)"
         >
             &lt; Back
@@ -58,7 +58,7 @@ watch(
                 <h2 class="text-sm font-medium mt-3">
                     Category :
                     <span
-                        class="bg-gray-200 text-gray-600 rounded-full ml-2 px-3 py-1 inline-block"
+                        class="bg-gray-200 text-gray-600 rounded-full ml-2 px-4 py-1 inline-block"
                         >{{ data.meals[0].strCategory }}</span
                     >
                 </h2>
