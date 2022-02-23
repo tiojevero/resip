@@ -19,7 +19,7 @@ onMounted(() => {
 
 <template>
     <div
-        class="bg-cover bg-[url('https://images.unsplash.com/photo-1551782450-a2132b4ba21d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80')] h-[calc(100vh-60px)] flex"
+        class="bg-cover bg-black bg-[url('https://images.unsplash.com/photo-1551782450-a2132b4ba21d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80')] h-[calc(100vh-60px)] flex"
     >
         <div class="flex h-full w-full bg-gradient-to-t from-black">
             <div

@@ -31,7 +31,7 @@ onMounted(() => {
                     <img
                         :src="meal.strMealThumb"
                         :alt="meal.strMealThumb"
-                        lazy
+                        loading="lazy"
                     />
                 </div>
                 <h5 class="font-semibold line-clamp-2 mt-2 mb-4">
