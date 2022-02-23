@@ -32,7 +32,7 @@ defineProps({
                 </h5>
             </router-link>
         </div>
-        <p v-else>Sorry, i can't find your favorite foods ☹</p>
+        <p v-else>Sorry, i can't find your favourite foods ☹</p>
     </div>
     <p v-else>Loading...</p>
 </template>

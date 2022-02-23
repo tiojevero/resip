@@ -27,13 +27,13 @@ onMounted(() => {
             >
                 <div>
                     <h1 class="text-4xl lg:text-5xl text-white font-bold mb-5">
-                        Find Your Favorite Food Recipe
+                        Find Your Favourite Food Recipe
                     </h1>
                     <div class="relative w-full py-3 mt-3 mx-auto">
                         <input
                             type="text"
                             class="w-full p-4 bg-white outline-none rounded-xl"
-                            placeholder="Type your favorite food"
+                            placeholder="Type your favourite food"
                             v-model="search"
                             @keyup.enter="searchRecipe"
                         />

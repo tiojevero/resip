@@ -21,6 +21,11 @@ const routes: Array<RouteRecordRaw> = [
         name: "RecipeDetail",
         component: () => import("../views/RecipeDetail.vue"),
     },
+    {
+        path: "/:pathMatch(.*)*",
+        name: "NotFound",
+        component: () => import("../views/NotFound.vue"),
+    },
 ];
 
 const router = createRouter({
