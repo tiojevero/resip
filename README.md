@@ -24,3 +24,10 @@ Coding References :
 - [Vue 3 Docs](https://vuejs.org/guide/introduction.html)
 - [Vite](https://vitejs.dev/)
 - [Tailwind](https://tailwindcss.com/)
+
+Stack : 
+| JS Framework  | Vue 3      |
+|---------------|------------|
+| CSS Framework | Tailwind   |
+| Type Checking | Typescript |
+| Bundler       | Vite       |
