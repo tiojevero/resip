@@ -22,8 +22,9 @@ pnpm run dev
 
 Coding References : 
 - [Vue 3 Docs](https://vuejs.org/guide/introduction.html)
-- [Vite](https://vitejs.dev/)
 - [Tailwind](https://tailwindcss.com/)
+- [Vite](https://vitejs.dev/) 
+- [Typescript](https://www.typescriptlang.org/docs/)
 
 Stack : 
 | JS Framework  | Vue 3      |
